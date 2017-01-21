@@ -1,9 +1,10 @@
-'use strict';
 $(function () {
+  'use strict';
 
   var $search = $('.search'),
     $searchInput = $search.find('input'),
     $searchBtn = $search.find('img'),
+    $mainMenuList = $('.main-menu li'),
     inputValue = null,
     KEY_ENTER = 13;
 
@@ -84,5 +85,16 @@ $(function () {
     }
   });
 
+  // 메인 메뉴 HOVER 이벤트
+  $mainMenuList.on({
+    mouseenter: function () {
+      $(this).addClass('on');
+      $(this).find('.mega-menu').css({zIndex:1}).stop(true, true).slideDown(400);
+    },
+    mouseleave: function () {
+      $(this).removeClass('on');
+      $(this).find('.mega-menu').css({zIndex:0}).stop(true, true).slideUp(400);
+    }
+  });
 
 });

@@ -1,12 +1,16 @@
 @charset "UTF-8";
 @import url("http://fonts.googleapis.com/earlyaccess/nanumgothic.css");
 
+
+/*COMMON*/
 body { height: 4000px; }
 img { vertical-align: top; }
 .container {
     font-family: "Nanum Gothic", Arial, sans-serif;
 }
 
+
+/*TOP-CARD*/
 .top-card {
     background: #111111;
     color: white;
@@ -71,47 +75,29 @@ img { vertical-align: top; }
 }
 
 
+/*HEADER*/
 header {
     background: #F6F5EF;
     border-top: 2px solid black;
 }
-header .inner {
+header > .inner {
     width: 1100px;
     height: 120px;
     margin: 0 auto;
-    position: relative;
 }
-header .top-card-toggle {
-    background: url("../img/toggle_btn.png");
-    width: 55px;
-    height: 44px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    overflow: hidden;
-    cursor: pointer;
+header .left-inner { float: left; }
+header .right-inner {
+    width: 750px;
+    float: right;
 }
-header .top-card-toggle img {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-header .top-card-toggle img.cup {
-    top: 44px;
-}
-header .top-card-toggle img.star {
-    top: -44px;
-    opacity: 0.6;
-}
+
 header .logo {
-    position: absolute;
-    top: 22px;
-    left: 0;
+    float: left;
+    margin-top: 22px;
 }
 header .sub-menu {
-    position: absolute;
-    top: 10px;
-    right: 66px;
+    float: right;
+    margin-top: 10px;
 }
 header .sub-menu li {
     float: left;
@@ -126,7 +112,8 @@ header .sub-menu li::before {
     display: block;
 }
 header .sub-menu li:first-child::before,
-header .sub-menu li:last-child::before {
+header .sub-menu li.search::before,
+header .sub-menu li.top-card-toggle::before {
     width: 0;
     height: 0;
 }
@@ -162,6 +149,27 @@ header .sub-menu li.search img {
 header .sub-menu li.search:hover img {
     opacity: 0.6;
 }
+header .sub-menu li.top-card-toggle {
+    background: url("../img/toggle_btn.png");
+    width: 55px;
+    height: 44px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin: -10px 0 0 10px;
+}
+header .sub-menu li.top-card-toggle img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+header .sub-menu li.top-card-toggle img.cup {
+    top: 44px;
+}
+header .sub-menu li.top-card-toggle img.star {
+    top: -44px;
+    opacity: 0.6;
+}
 
 header .sub-menu li a {
     font-size: 13px;
@@ -176,14 +184,13 @@ header .sub-menu li a:hover {
 
 
 header .main-menu {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+    float: right;
+    margin-top: 15px;
 }
-header .main-menu li {
+header .main-menu > li {
     float: left;
 }
-header .main-menu li a {
+header .main-menu > li > a {
     height: 50px;
     padding: 10px 18px 0 18px;
     font-family: Arial, sans-serif;
@@ -191,15 +198,83 @@ header .main-menu li a {
     color: #333;
     display: block;
 }
-header .main-menu li a:hover {
+header .main-menu > li.on > a {
     background: #2C2A29;
     color: #669900;
 }
 
 
+header .mega-menu {
+    background: #2C2A29;
+    width: 100%;
+    position: absolute;
+    top: 122px;
+    left: 0;
+    border-bottom: 4px solid #2C2A29;
+    display: none;
+}
+header .mega-menu > li {
+}
+header .mega-menu .inner {
+    width: 1100px;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+header .mega-menu .texture {
+    background: url("../img/pattern.jpg");
+}
+header .mega-menu .texture .left-figure { float: left; }
+header .mega-menu .texture .right-figure { float: right; }
+
+header .mega-menu .texture .right-figure .image {
+    float: left;
+    margin-right: 15px;
+}
+header .mega-menu .texture .right-figure .caption {
+    width: 220px;
+    float: left;
+}
+
+header .mega-menu .texture .caption {
+    display: block;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+header .mega-menu .texture .caption h1 {
+    color: #999;
+    font-weight: 900;
+}
+header .mega-menu .texture .caption h1.new::after {
+    content: url("../img/icon_new.png");
+    position: relative;
+    top: 3px;
+    left: 5px;
+}
+header .mega-menu .texture .caption p {
+    color: #64a70b;
+}
 
 
-
+header .mega-menu .menu > li {
+    width: 220px;
+    float: left;
+}
+header .mega-menu .menu > li h1 {
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+}
+header .mega-menu .menu > li h1 a {
+    color: #fff;
+}
+header .mega-menu .menu > li ul li {
+    padding: 5px 0;
+    font-size: 12px;
+}
+header .mega-menu .menu > li ul li a {
+    color: #999;
+}
 
 
 
