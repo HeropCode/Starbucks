@@ -136,13 +136,13 @@ $(function () {
       $(this).addClass('on');
       var height = $(this).find('.mega-menu').height();
       $('header').stop().animate({
-        height: 122 + height
+        height: 120 + height
       }, 300);
     },
     mouseleave: function () {
       $(this).removeClass('on');
       $('header').stop().animate({
-        height: 122
+        height: 120
       }, 300);
     }
   });
@@ -165,17 +165,19 @@ $(function () {
 
   // 프로모션 좌우 슬라이드
   var promotionSlider = $('.promotion .slider ul').bxSlider({
-    slideMargin: 0,
-    auto: false,
-    pause: 2000,
-    pager: false,
+    slideMargin: 10,
+    auto: true,
+    pause: 3000,
+    pager: true,
+    pagerSelector: '.promotion .pager',
     controls: false,
     minSlides: 1,
     maxSlides: 3,
     moveSlides: 1,
     slideWidth: 819,
     onSlideBefore: function ($slideElement, oldIndex, newIndex) {
-
+      $('.promotion .slider li').removeClass('active');
+      $slideElement.addClass('active');
     },
     onSlideAfter: function ($slideElement, oldIndex, newIndex) {
 

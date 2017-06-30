@@ -31,81 +31,68 @@ body {
     color: white;
     display: none;
 }
-.top-card .container {
-    /*max-width: 1100px;*/
+.top-card .inner {
+    width: 1100px;
     margin: 0 auto;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     position: relative;
     letter-spacing: -1px;
 }
 .top-card .card {
+    width: 50%;
+    float: left;
+    position: relative;
+    box-sizing: border-box;
+    padding: 20px;
     border-right: 1px solid #353535;
 }
 .top-card .card:last-child {
     border-right: none;
 }
 .top-card .icon {
-    padding: 0;
+    float: left;
 }
 .top-card h1 {
     font-weight: 900;
     font-size: 16px;
     line-height: 1.8;
-    margin: 0 0 6px 0;
 }
 .top-card p {
     font-size: 14px;
     line-height: 1.4;
-    /*max-width: 400px;*/
     word-break: keep-all;
 }
-.top-card .btn-area {
-    height: 72px;
-}
 .top-card .btn-group {
-    width: 100%;
     position: absolute;
     bottom: 0;
+    right: 20px;
 }
 .top-card .btn {
-    /*width: 70px;*/
-    /*height: 24px;*/
-    padding: 4px 12px;
-    margin-bottom: 5px;
+    width: 70px;
+    padding: 6px 10px;
     border: 1px solid #fff;
     border-radius: 3px;
     font-size: 12px;
     font-weight: bold;
     text-align: center;
     cursor: pointer;
-}
-.top-card .line {
-    width: 1px;
-    height: 70px;
-    background: #353535;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+    float: left;
+    margin: 4px;
 }
 
 
 /*HEADER*/
 header {
-    height: 122px;
-    /*height: 608px;*/
     background: url('../img/header_bg.jpg') repeat-x top,
                 url('../img/pattern.jpg') repeat-x bottom,
                 #2c2a29;
     border-top: 2px solid black;
-    border-bottom: 1px solid #cfcfcf;
+    border-bottom: 1px solid #c8c8c8;
     position: relative;
     overflow: hidden;
 }
-header .container {
-    /*width: 1100px;*/
+header .inner {
+    width: 1100px;
     height: 120px;
     padding: 0;
     position: relative;
@@ -116,23 +103,6 @@ header .logo {
     top: 22px;
     left: 0;
     z-index: 1;
-}
-header .main-menu-responsive {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    display: none;
-}
-header .main-menu-responsive li {
-    float: left;
-    margin-right: 20px;
-    cursor: pointer;
-}
-header .main-menu-responsive li:last-child {
-    margin-right: 0;
-}
-header .main-menu-responsive li img {
-    width: 44px;
 }
 header .sub-menu {
     position: absolute;
@@ -224,8 +194,6 @@ header .sub-menu li a:hover {
 
 
 header .main-menu {
-    /*float: right;*/
-    /*margin-top: 10px;*/
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -238,13 +206,11 @@ header .main-menu > ul > li {
     float: left;
 }
 header .main-menu > ul > li > a {
-    height: 60px;
-    padding: 10px 20px 0 20px;
+    padding: 10px 20px 34px 20px;
     font-family: Arial, sans-serif;
     font-size: 13px;
     color: #333;
     display: block;
-    text-decoration: none;
 }
 header .main-menu > ul > li.on > a {
     background: #2C2A29;
@@ -262,16 +228,32 @@ header .mega-menu {
 header .main-menu > ul > li.on .mega-menu {
     display: block;
 }
-header .mega-menu > li {
-}
-header .mega-menu .inner {
-    width: 1100px;
-    margin: 0 auto;
-    padding: 30px 0;
-}
 
+header .mega-menu .menu {
+    padding: 20px 0;
+}
+header .mega-menu .menu > li {
+    width: 220px;
+    float: left;
+}
+header .mega-menu .menu > li h1 {
+    padding: 3px 0 12px 0;
+    font-size: 14px;
+}
+header .mega-menu .menu > li h1 a {
+    color: #fff;
+}
+header .mega-menu .menu > li ul li {
+    padding: 5px 0;
+    font-size: 12px;
+}
+header .mega-menu .menu > li ul li a {
+    color: #999;
+}
 header .mega-menu .texture {
     height: 152px;
+    padding: 26px 0;
+    box-sizing: border-box;
 }
 header .mega-menu .texture .left-figure { float: left; }
 header .mega-menu .texture .right-figure { float: right; }
@@ -284,7 +266,6 @@ header .mega-menu .texture .right-figure .caption {
     width: 220px;
     float: left;
 }
-
 header .mega-menu .texture .caption {
     display: block;
     font-size: 12px;
@@ -308,26 +289,6 @@ header .mega-menu .texture .caption p {
 }
 
 
-header .mega-menu .menu > li {
-    width: 220px;
-    float: left;
-}
-header .mega-menu .menu > li h1 {
-    padding: 3px 0 12px 0;
-    font-size: 14px;
-}
-header .mega-menu .menu > li h1 a {
-    color: #fff;
-}
-header .mega-menu .menu > li ul li {
-    padding: 5px 0;
-    font-size: 12px;
-}
-header .mega-menu .menu > li ul li a {
-    color: #999;
-}
-
-
 /*VISUAL*/
 .visual {
     background: url("../img/bg_winter.jpg") center;
@@ -343,10 +304,6 @@ header .mega-menu .menu > li ul li a {
     position: absolute;
     top: 88px;
     left: -10px;
-    display: none;
-}
-.visual .title {
-
 }
 .visual .detail_view {
     width: 125px;
@@ -369,7 +326,7 @@ header .mega-menu .menu > li ul li a {
     color: #fff;
 }
 .visual .cup {
-    display: none;
+
 }
 .visual .cup1_img {
     position: absolute;
@@ -395,7 +352,6 @@ header .mega-menu .menu > li ul li a {
     position: absolute;
     bottom: 0;
     left: 275px;
-    display: none;
 }
 
 
@@ -423,13 +379,15 @@ header .mega-menu .menu > li ul li a {
     width: 1100px;
     height: 62px;
     margin: 0 auto;
+    position: relative;
 }
 .notice-line .left-inner {
     width: 60%;
     height: 62px;
     background: #111;
-    float: left;
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .notice-line .left-inner h1 {
     color: white;
@@ -441,6 +399,8 @@ header .mega-menu .menu > li ul li a {
     left: 0;
 }
 .notice-line .left-inner .slider {
+    width: 500px;
+    height: 62px;
     font-size: 14px;
     font-weight: 500;
     line-height: 62px;
@@ -459,8 +419,9 @@ header .mega-menu .menu > li ul li a {
 .notice-line .right-inner {
     width: 40%;
     height: 62px;
-    float: right;
-    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .notice-line .right-inner h1 {
     color: #111;
@@ -485,18 +446,16 @@ header .mega-menu .menu > li ul li a {
     /*display: none;*/
 }
 .promotion .inner {
-    width: 2477px;
-    /*width: 1920px;*/
-    height: 658px;
-    position: relative;
-    left: 50%;
-    margin-left: -1238px;
-    /*margin-left: -960px;*/
-    padding: 40px 0 66px 0;
-    box-sizing: border-box;
+    width: 1920px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+.promotion .slider {
+    width: 1920px;
+    height: 553px;
 }
 .promotion .slider ul {
-    margin-left: 819px;
+    margin-left: 550px;
 }
 .promotion .slider li {
     position: relative;
@@ -511,7 +470,7 @@ header .mega-menu .menu > li ul li a {
     position: absolute;
     bottom: 16px;
     left: 50%;
-    margin-left: -62px;
+    margin-left: -63px;
     border: 2px solid #111111;
     border-radius: 3px;
     color: #111111;
@@ -527,152 +486,23 @@ header .mega-menu .menu > li ul li a {
     background: #111;
 }
 .promotion .pager {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    margin-left: -150px;
+    display: table;
+    margin: 20px auto 0 auto;
 }
-.promotion .pager li {
-    background: url("../img/slider_pager.png");
-    width: 13px;
-    height: 12px;
+.promotion .pager .bx-pager-item {
     float: left;
     margin-right: 10px;
 }
-.promotion .pager li.active {
-    background: url("../img/slider_pager_active.png");
+.promotion .pager .bx-pager-item:last-child {
+    margin-right: 0;
 }
-
-
-.dimming {
-    width: 100%;
-    height: 100%;
-    background: black;
-    position: fixed;
-    top: 0;
-    left: 0;
-    opacity: 0.6;
-    z-index: 1000;
-    display: none;
-}
-.side-menu {
-    width: 80%;
-    height: 100%;
-    background: red;
-    position: fixed;
-    top: 0;
-    right: -80%;
-    z-index: 1001;
-    overflow-y: scroll;
-    box-sizing: content-box;
-}
-.side-menu .menu {
-
-}
-.side-menu .menu > li {
-
-}
-.side-menu .menu > li h1 {
-    padding: 30px;
-    background: black;
-    color: #64a70b;
-    font-size: 1.2em;
-    font-weight: 600;
-}
-.side-menu .menu > li ul {
-    display: none;
-}
-.side-menu .menu > li ul li {
-
-}
-.side-menu .menu > li ul li a {
+.promotion .pager .bx-pager-item a {
+    background: url("../img/slider_pager.png");
+    width: 13px;
+    height: 12px;
     display: block;
-    padding: 30px 40px;
-    color: white;
-    font-size: 1em;
-    background: #2d2926;
+    text-indent: -9999px;
 }
-
-
-@media (max-width: 1200px) {
-    .top-card .btn-area {
-        height: auto;
-        padding: 0;
-        margin-top: 14px;
-    }
-    .top-card .btn-group {
-        position: static;
-    }
-
-    .visual .inner {
-        transform: scale(.8);
-        left: 50%;
-        margin-left: -550px;
-    }
-}
-@media (max-width: 992px) {
-    .top-card .card {
-        border-right: none;
-        border-bottom: 1px solid #353535;
-        padding-bottom: 15px;
-        margin-bottom: 15px;
-    }
-    .top-card .card:last-child {
-        border-bottom: none;
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-
-    header {
-        height: 70px !important;
-    }
-    header .logo {
-        top: 10px;
-        left: 15px;
-    }
-    header .main-menu-responsive {
-        display: block;
-    }
-    header .logo img {
-        max-width: 50px;
-    }
-    header .sub-menu {
-        display: none;
-    }
-    header .main-menu {
-        display: none;
-    }
-
-    .visual {
-        margin-top: 70px;
-        height: 450px;
-    }
-    .visual .inner {
-        transform: translate(0, -105px) scale(.6);
-    }
-}
-@media (max-width: 768px) {
-    header .main-menu-responsive li {
-        margin-right: 8px;
-    }
-
-    .visual {
-        height: 564px;
-    }
-    .visual .inner {
-        transform: translate(-100px, 40px) scale(.5);
-        /*margin-left: -650px;*/
-    }
-    .visual .title-group {
-        transform: translate(520px, -380px) scale(1.3);
-        /*top: -200px;*/
-        /*left: 360px;*/
-    }
-    .visual .title-group .detail_view {
-        display: none;
-    }
-
-    .side-menu {
-        font-size: 14px;
-    }
+.promotion .pager .bx-pager-item a.active {
+    background: url("../img/slider_pager_active.png");
 }
