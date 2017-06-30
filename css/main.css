@@ -420,7 +420,7 @@ header .mega-menu .menu > li ul li a {
     right: 0;
 }
 .notice-line .inner {
-    width: 1100px;
+    max-width: 1100px;
     height: 62px;
     margin: 0 auto;
 }
@@ -441,12 +441,15 @@ header .mega-menu .menu > li ul li a {
     left: 0;
 }
 .notice-line .left-inner .slider {
+    max-width: 100%;
     font-size: 14px;
     font-weight: 500;
     line-height: 62px;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 90px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 .notice-line .left-inner .slider a {
     color: white;
@@ -485,18 +488,19 @@ header .mega-menu .menu > li ul li a {
     /*display: none;*/
 }
 .promotion .inner {
-    width: 2477px;
-    /*width: 1920px;*/
+    /*width: 2477px;*/
+    max-width: 1920px;
     height: 658px;
     position: relative;
     left: 50%;
-    margin-left: -1238px;
+    margin-left: -960px;
     /*margin-left: -960px;*/
     padding: 40px 0 66px 0;
     box-sizing: border-box;
 }
 .promotion .slider ul {
-    margin-left: 819px;
+    /*margin-left: 819px;*/
+    margin-left: 28.64%;
 }
 .promotion .slider li {
     position: relative;
@@ -609,6 +613,16 @@ header .mega-menu .menu > li ul li a {
         left: 50%;
         margin-left: -550px;
     }
+
+    .notice-line .inner {
+        max-width: 100%;
+    }
+    .notice-line .left-inner {
+        width: 100%;
+    }
+    .notice-line .right-inner {
+        width: 100%;
+    }
 }
 @media (max-width: 992px) {
     .top-card .card {
@@ -670,6 +684,17 @@ header .mega-menu .menu > li ul li a {
     }
     .visual .title-group .detail_view {
         display: none;
+    }
+
+    .notice-line .left-inner {
+        padding-top: 30px;
+        box-sizing: content-box;
+    }
+    .notice-line .left-inner h1 {
+        left: 20px;
+    }
+    .notice-line .left-inner .slider {
+        left: 20px;
     }
 
     .side-menu {

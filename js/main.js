@@ -151,8 +151,11 @@ $(function () {
   // 공지사항 상하 슬라이드
   $('.notice-line .slider ul').bxSlider({
     mode: 'vertical',
+    pager: false,
+    controls: false,
     auto: true,
-    pause: 5000
+    pause: 5000,
+    responsive: true
   });
 
 
@@ -166,7 +169,7 @@ $(function () {
   // 프로모션 좌우 슬라이드
   var promotionSlider = $('.promotion .slider ul').bxSlider({
     slideMargin: 0,
-    auto: false,
+    auto: true,
     pause: 2000,
     pager: false,
     controls: false,
@@ -196,8 +199,6 @@ $(function () {
   $('.dimming').on('click', function () {
     closeSideMenu();
   });
-
-
 
 
 
