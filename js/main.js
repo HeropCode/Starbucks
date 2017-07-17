@@ -137,13 +137,13 @@ $(function () {
       var height = $(this).find('.mega-menu').height();
       $('header').stop().animate({
         height: 120 + height
-      }, 300);
+      }, 250);
     },
     mouseleave: function () {
       $(this).removeClass('on');
       $('header').stop().animate({
         height: 120
-      }, 300);
+      }, 250);
     }
   });
 
@@ -166,8 +166,6 @@ $(function () {
   // 프로모션 좌우 슬라이드
   var promotionSlider = $('.promotion .slider ul').bxSlider({
     slideMargin: 10,
-    auto: true,
-    pause: 3000,
     pager: true,
     pagerSelector: '.promotion .pager',
     controls: false,
@@ -175,13 +173,17 @@ $(function () {
     maxSlides: 3,
     moveSlides: 1,
     slideWidth: 819,
-    onSlideBefore: function ($slideElement, oldIndex, newIndex) {
+    onSlideAfter: function ($slideElement, oldIndex, newIndex) {
       $('.promotion .slider li').removeClass('active');
       $slideElement.addClass('active');
-    },
-    onSlideAfter: function ($slideElement, oldIndex, newIndex) {
-
     }
+  });
+
+  $('.promotion .prev').on('click', function () {
+    promotionSlider.goToPrevSlide();
+  });
+  $('.promotion .next').on('click', function () {
+    promotionSlider.goToNextSlide();
   });
 
 
@@ -197,6 +199,18 @@ $(function () {
 
   $('.dimming').on('click', function () {
     closeSideMenu();
+  });
+
+
+  $('.award .slider ul').bxSlider({
+    slideMargin: 35,
+    pager: false,
+    controls: false,
+    auto: true,
+    minSlides: 5,
+    maxSlides: 5,
+    moveSlides: 1,
+    slideWidth: 192
   });
 
 
