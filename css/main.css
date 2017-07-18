@@ -128,7 +128,7 @@ img { vertical-align: top; }
     background: #FFF;
     transform-origin: 50% 50%;
     top: 46%;
-    left: 26%;
+    left: 24%;
     margin: 0;
 }
 .arrow-btn.arrow-btn-plus::before {
@@ -380,6 +380,9 @@ header .mega-menu .menu > li ul li {
 header .mega-menu .menu > li ul li a {
     color: #999;
 }
+header .mega-menu .menu > li ul li a:hover {
+    color: #669900;
+}
 header .mega-menu .texture {
     height: 152px;
     padding: 26px 0;
@@ -467,6 +470,9 @@ header .mega-menu .texture .caption p {
     position: absolute;
     bottom: 0;
     left: 275px;
+}
+.visual .fade-in {
+    opacity: 0;
 }
 
 
@@ -593,16 +599,23 @@ header .mega-menu .texture .caption p {
     display: table;
     margin: 20px auto 0 auto;
 }
-.promotion .pause {
+.promotion .auto-controls {
+    float: left;
+    margin-right: 10px;
+}
+.promotion .auto-controls .bx-stop {
     background: url("../img/slider_pause.png");
     width: 9px;
     height: 12px;
-    float: left;
-    margin-right: 10px;
+    display: block;
     cursor: pointer;
 }
-.promotion .pause.play {
+.promotion .auto-controls .bx-start {
     background: url("../img/slider_play.png");
+    width: 9px;
+    height: 12px;
+    display: block;
+    cursor: pointer;
 }
 .promotion .pager {
     float: left;

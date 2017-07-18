@@ -34,6 +34,10 @@
     <script src="js/plugins/prefixfree.min.js"></script>
     <script src="js/plugins/jquery.bxslider.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/ScrollToPlugin.min.js"></script>
+
+
     <script src="js/main.js"></script>
 
 </head>
@@ -456,19 +460,19 @@
     <section class="visual">
         <div class="inner">
 
-            <div class="title-group hide">
+            <div class="title-group fade-in">
                 <img src="img/img_visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS">
                 <a href="#" class="btn btn-brown">자세히 보기</a>
             </div>
-            <div class="cup">
+            <div class="cup fade-in">
                 <img src="img/img_visual_cup1.png" alt="new OATMEAL LATTE" class="cup1_img">
                 <img src="img/img_visual_cup1_desc.png" alt="오트밀 라떼" class="cup1_desc">
             </div>
-            <div class="cup">
+            <div class="cup fade-in">
                 <img src="img/img_visual_cup2.png" alt="new STARBUCKS CARAMEL CRUMBLE MOCHA" class="cup2_img">
                 <img src="img/img_visual_cup2_desc.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2_desc">
             </div>
-            <img src="img/img_visual_spoon3.png" alt="spoon image" class="spoon">
+            <img src="img/img_visual_spoon3.png" alt="spoon image" class="spoon fade-in">
 
         </div>
     </section>
@@ -495,7 +499,9 @@
 
             <div class="right-inner">
                 <h1>스타벅스 프로모션</h1>
-                <div class="arrow-btn arrow-btn-bottom"></div>
+                <div class="btn-hello">
+                    <div class="arrow-btn arrow-btn-bottom"></div>
+                </div>
             </div>
 
         </div>
@@ -532,7 +538,7 @@
             </div>
 
             <div class="controls">
-                <div class="pause"></div>
+                <div class="auto-controls"></div>
                 <div class="pager"></div>
             </div>
             <div class="arrow-btn arrow-btn-left prev"></div>
