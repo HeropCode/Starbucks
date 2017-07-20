@@ -1,10 +1,7 @@
-[스타벅스 예제](https://heropcode.github.io/Starbucks/)
+# STARBUCKS INIT.
 
-# STARBUCKS
+스타벅스 예제의 초기 설정입니다.<br>
+이 저장소의 내용으로 예제를 준비하십시오.
 
-## 연습 준비하기
-
-스타벅스 예제를 작업하기 위해 초기 설정을 준비하세요.
-
-[초기설정 다운로드]()
+[완성 단계 저장소로 이동](https://github.com/HeropCode/Starbucks/tree/master) 
 
