@@ -4,7 +4,7 @@
 
 ## 연습 준비하기
 
-스타벅스 예제를 작업하기 위해 초기 설정을 준비하세요.
+스타벅스 예제를 작업하기 위해 초기 설정 단계의 저장소로 이동하여 프로젝트 구조를 준비하십시오.
 
-[초기설정 다운로드](https://github.com/HeropCode/Starbucks/tree/initialization)
+[초기 설정 단계 저장소로 이동](https://github.com/HeropCode/Starbucks/tree/initialization)
 
