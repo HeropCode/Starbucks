@@ -16,9 +16,7 @@
     <meta property="og:image" content=""/>
     <meta property="og:url" content=""/>
 
-    <link rel="icon" href="favicon.png"/>
-    <link rel="apple-touch-icon-precomposed" href="favicon.png"/>
-    <!--<link rel="shortcut icon" href="favicon.ico" />-->
+    <link rel="shortcut icon" href="favicon.ico" />
 
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/main.css"/>
@@ -33,10 +31,10 @@
     <script src="js/plugins/jquery.easing.min.js"></script>
     <script src="js/plugins/prefixfree.min.js"></script>
     <script src="js/plugins/jquery.bxslider.min.js"></script>
+    <script src="js/plugins/jquery.nicescroll.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/plugins/ScrollToPlugin.min.js"></script>
-
 
     <script src="js/main.js"></script>
 
@@ -54,7 +52,7 @@
             <div class="inner clearfix">
 
                 <div class="card">
-                    <img src="img/icon_login.jpg" alt="스타벅스 회원" class="icon">
+                    <img src="img/top_card_icon1.jpg" alt="스타벅스 회원" class="icon">
                     <h1>스타벅스커피 코리아 회원이 아니세요?</h1>
                     <p>스타벅스커피 코리아 회원이 되시면 다양하고 특별한 혜택들을 마음껏 누릴 수 있습니다.</p>
                     <div class="btn-group">
@@ -64,7 +62,7 @@
                 </div>
 
                 <div class="card">
-                    <img src="img/icon_card.jpg" alt="스타벅스 회원" class="icon">
+                    <img src="img/top_card_icon2.jpg" alt="스타벅스 회원" class="icon">
                     <h1>스타벅스 카드를 가지고 계신가요?</h1>
                     <p>스타벅스 카드를 등록하시면, 마이 스타벅스 리워드 만의 특별한 혜택을 누릴 수 있습니다.</p>
                     <div class="btn-group">
@@ -88,12 +86,14 @@
                     <li><a href="#">Customer Service & Ideas</a></li>
                     <li><a href="#">Find a Store</a></li>
                     <li class="search">
-                        <input type="text" placeholder="">
-                        <img src="img/btn_search.png" alt="Search Button">
+                        <form action="" method="post">
+                            <input type="text">
+                            <img src="img/icon_search.png" alt="Search Button">
+                        </form>
                     </li>
-                    <li class="top-card-toggle">
-                        <img src="img/btn_toggle_cup.png" alt="Starbucks cup" class="cup">
-                        <img src="img/btn_toggle_star.png" alt="Starbucks star" class="star">
+                    <li class="toggle-top-card">
+                        <img src="img/top_card_toggle_cup.png" alt="Starbucks cup" class="cup">
+                        <img src="img/top_card_toggle_star.png" alt="Starbucks star" class="star">
                     </li>
                 </ul>
 
@@ -158,7 +158,7 @@
                                     </div>
 
                                     <div class="right-figure clearfix">
-                                        <a href="#" class="image"><img src="img/img_figure1.jpg" alt="뉴이어 원두"></a>
+                                        <a href="#" class="image"><img src="img/header_figure1.jpg" alt="뉴이어 원두"></a>
                                         <a href="#" class="caption">
                                             <h1>뉴이어 원두</h1>
                                             <p>새해의 시작을 함께하기에 좋은 시즌 원두</p>
@@ -234,7 +234,7 @@
                                     </div>
 
                                     <div class="right-figure clearfix">
-                                        <a href="#" class="image"><img src="img/img_figure2.jpg" alt="뉴이어 신규 상품"></a>
+                                        <a href="#" class="image"><img src="img/header_figure2.jpg" alt="뉴이어 신규 상품"></a>
                                         <a href="#" class="caption">
                                             <h1>뉴이어 신규 상품</h1>
                                             <p>정유년 붉은 닭의 해, 머그 & 텀블러</p>
@@ -277,7 +277,7 @@
                                     </div>
 
                                     <div class="right-figure clearfix">
-                                        <a href="#" class="image"><img src="img/img_figure3.jpg" alt="신규 매장"></a>
+                                        <a href="#" class="image"><img src="img/header_figure3.jpg" alt="신규 매장"></a>
                                         <a href="#" class="caption">
                                             <h1>신규 매장</h1>
                                             <p>스타벅스 신규 오픈 매장을 알려드립니다.</p>
@@ -335,7 +335,7 @@
                                     </div>
 
                                     <div class="right-figure clearfix">
-                                        <a href="#" class="image"><img src="img/img_figure4.jpg" alt="윤리경영 보고서"></a>
+                                        <a href="#" class="image"><img src="img/header_figure4.jpg" alt="윤리경영 보고서"></a>
                                         <a href="#" class="caption">
                                             <h1>윤리경영 보고서</h1>
                                             <p>
@@ -436,7 +436,7 @@
                                     </div>
 
                                     <div class="right-figure clearfix">
-                                        <a href="#" class="image"><img src="img/img_figure.jpg" alt="뉴이어 프로모션"></a>
+                                        <a href="#" class="image"><img src="img/header_figure5.jpg" alt="뉴이어 프로모션"></a>
                                         <a href="#" class="caption">
                                             <h1>뉴이어 프로모션</h1>
                                             <p>
@@ -457,29 +457,29 @@
 
 
     <!--VISUAL-->
-    <section class="visual">
+    <section class="section visual">
         <div class="inner">
 
             <div class="title-group fade-in">
-                <img src="img/img_visual_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS">
+                <img src="img/visual_img_title.png" alt="STARBUCKS DELIGHTFUL START TO THE YEARS">
                 <a href="#" class="btn btn-brown">자세히 보기</a>
             </div>
             <div class="cup fade-in">
-                <img src="img/img_visual_cup1.png" alt="new OATMEAL LATTE" class="cup1_img">
-                <img src="img/img_visual_cup1_desc.png" alt="오트밀 라떼" class="cup1_desc">
+                <img src="img/visual_img_cup1.png" alt="new OATMEAL LATTE" class="cup1_img">
+                <img src="img/visual_img_cup1_text.png" alt="오트밀 라떼" class="cup1_desc">
             </div>
             <div class="cup fade-in">
-                <img src="img/img_visual_cup2.png" alt="new STARBUCKS CARAMEL CRUMBLE MOCHA" class="cup2_img">
-                <img src="img/img_visual_cup2_desc.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2_desc">
+                <img src="img/visual_img_cup2.png" alt="new STARBUCKS CARAMEL CRUMBLE MOCHA" class="cup2_img">
+                <img src="img/visual_img_cup2_text.png" alt="스타벅스 카라멜 크럼블 모카" class="cup2_desc">
             </div>
-            <img src="img/img_visual_spoon3.png" alt="spoon image" class="spoon fade-in">
+            <img src="img/visual_img_spoon.png" alt="spoon image" class="spoon fade-in">
 
         </div>
     </section>
 
 
     <!--NOTICE-->
-    <section class="notice-line">
+    <section class="section notice-line">
         <div class="bg-left"></div>
         <div class="bg-right"></div>
         <div class="inner">
@@ -499,7 +499,7 @@
 
             <div class="right-inner">
                 <h1>스타벅스 프로모션</h1>
-                <div class="btn-hello">
+                <div class="toggle-promotion">
                     <div class="arrow-btn arrow-btn-bottom"></div>
                 </div>
             </div>
@@ -514,24 +514,24 @@
 
             <div class="slider">
                 <ul>
-                    <li class="active">
-                        <img src="img/img_promotion1.jpg" alt="2017 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!">
+                    <li class="first">
+                        <img src="img/promotion_slide1.jpg" alt="2017 뉴이어, 스타벅스와 함께 즐겁고 활기차게 시작하세요!">
                         <a href="#" class="btn">자세히 보기</a>
                     </li>
                     <li>
-                        <img src="img/img_promotion2.jpg" alt="기간 내 스타벅스 카드 e-Gift를 3만원 이상 선물 시, 아메리카노 e-쿠폰을 드립니다.">
+                        <img src="img/promotion_slide2.jpg" alt="기간 내 스타벅스 카드 e-Gift를 3만원 이상 선물 시, 아메리카노 e-쿠폰을 드립니다.">
                         <a href="#" class="btn">자세히 보기</a>
                     </li>
                     <li>
-                        <img src="img/img_promotion3.jpg" alt="뉴이어 푸드와 제조 음료를 세트로 구매 시, 뉴이어 음료 BOGO(1+1) 쿠폰을 드립니다.">
+                        <img src="img/promotion_slide3.jpg" alt="뉴이어 푸드와 제조 음료를 세트로 구매 시, 뉴이어 음료 BOGO(1+1) 쿠폰을 드립니다.">
                         <a href="#" class="btn">자세히 보기</a>
                     </li>
                     <li>
-                        <img src="img/img_promotion4.jpg" alt="신년 MD 상품 포함 3만원 이상 구매 고객께 아메리카노(톨사이즈) 쿠폰을 드립니다.">
+                        <img src="img/promotion_slide4.jpg" alt="신년 MD 상품 포함 3만원 이상 구매 고객께 아메리카노(톨사이즈) 쿠폰을 드립니다.">
                         <a href="#" class="btn">자세히 보기</a>
                     </li>
                     <li>
-                        <img src="img/img_promotion5.jpg" alt="2017 DIGITAL LUCKY DRAW 100% 당첨의 행운을 드립니다!">
+                        <img src="img/promotion_slide5.jpg" alt="2017 DIGITAL LUCKY DRAW 100% 당첨의 행운을 드립니다!">
                         <a href="#" class="btn">자세히 보기</a>
                     </li>
                 </ul>
@@ -548,7 +548,7 @@
     </section>
 
 
-    <section class="rewards">
+    <section class="section rewards">
         <div class="bg-left"></div>
         <div class="bg-right"></div>
         <div class="inner">
@@ -564,7 +564,7 @@
 
 
     <!--BEANS-->
-    <section class="beans bg-fixed">
+    <section class="section beans bg-fixed">
         <div class="inner">
 
             <img src="img/beans_icon1.png" alt="" class="icon1">
@@ -576,14 +576,14 @@
 
 
     <!--SEASON PRODUCT-->
-    <section class="season-product">
+    <section class="section season-product">
         <div class="inner">
 
-            <img src="img/season_product.png" alt="아이스 커피 블렌드" class="product">
+            <img src="img/season_product_product.png" alt="아이스 커피 블렌드" class="product return-to-position to-right">
             <div class="description">
-                <div class="title"><img src="img/season_product_desc1.png" alt="상쾌하게 여름을 반겨줄 시즌 원두 아이스 커피 블렌드"></div>
-                <div class="desc"><img src="img/season_product_desc2.png" alt="아프리카와 라틴 아메리카 커피의 브렌드로 시트러스함과 은은한 캐러멜 향을 동시에 느낄 수 있으며, 차갑게 즐길 때 풍미가 더욱 깊어지는 원두입니다."></div>
-                <div class="btn">자세히 보기</div>
+                <div class="title return-to-position to-left"><img src="img/season_product_text1.png" alt="상쾌하게 여름을 반겨줄 시즌 원두 아이스 커피 블렌드"></div>
+                <div class="desc return-to-position to-left"><img src="img/season_product_text2.png" alt="아프리카와 라틴 아메리카 커피의 브렌드로 시트러스함과 은은한 캐러멜 향을 동시에 느낄 수 있으며, 차갑게 즐길 때 풍미가 더욱 깊어지는 원두입니다."></div>
+                <div class="more return-to-position to-left"><a href="#" class="btn">자세히 보기</a></div>
             </div>
 
         </div>
@@ -591,28 +591,28 @@
 
 
     <!--RESERVE-->
-    <section class="reserve">
+    <section class="section reserve">
         <div class="inner">
 
             <div class="description">
-                <img src="img/reserve_logo.png" alt="" class="logo">
-                <img src="img/reserve_desc.png" alt="" class="desc">
-                <div class="btn btn-gold">자세히보기</div>
+                <img src="img/reserve_logo.png" alt="" class="logo return-to-position to-right">
+                <img src="img/reserve_text.png" alt="" class="desc return-to-position to-right">
+                <div class="more return-to-position to-right"><a href="#" class="btn btn-gold">자세히보기</a></div>
             </div>
-            <img src="img/reseve_products.png" alt="" class="product">
+            <img src="img/reseve_products.png" alt="" class="product return-to-position to-left">
 
         </div>
     </section>
 
 
     <!--PICK YOUR FAVORITE-->
-    <section class="favorite bg-fixed">
+    <section class="section favorite bg-fixed">
         <div class="inner">
 
             <div class="description clearfix">
-                <div class="title"><img src="img/favorite_desc1.png" alt="PICK YOUR FAVORITE"></div>
-                <div class="desc"><img src="img/favorite_desc2.png" alt="다양한 메뉴를 스타벅스에서 즐겨보세요."></div>
-                <div class="btn btn-white">자세히 보기</div>
+                <div class="title return-to-position to-right"><img src="img/favorite_desc1.png" alt="PICK YOUR FAVORITE"></div>
+                <div class="desc return-to-position to-right"><img src="img/favorite_desc2.png" alt="다양한 메뉴를 스타벅스에서 즐겨보세요."></div>
+                <div class="more return-to-position to-right"><a class="btn btn-white">자세히 보기</a></div>
             </div>
 
         </div>
@@ -620,7 +620,7 @@
 
 
     <!--VIEW THE STORE-->
-    <section class="view-store bg-fixed">
+    <section class="section view-store bg-fixed">
 
         <div class="medal">
             <div class="front"></div>
@@ -631,17 +631,17 @@
 
 
     <!--FIND THE STORE-->
-    <section class="find-store">
+    <section class="section find-store">
         <div class="inner">
 
-            <img src="img/find_store_texture1.png" alt="" class="texture1">
-            <img src="img/find_store_texture2.png" alt="" class="texture2">
-            <img src="img/find_store_icon1.jpg" alt="" class="icon icon1">
-            <img src="img/find_store_icon2.jpg" alt="" class="icon icon2">
+            <img src="img/find_store_bg_texture1.png" alt="" class="texture1">
+            <img src="img/find_store_bg_texture2.png" alt="" class="texture2">
+            <img src="img/find_store_icon1.jpg" alt="" class="icon icon1 return-to-position to-right">
+            <img src="img/find_store_icon2.jpg" alt="" class="icon icon2 return-to-position to-right">
             <div class="description">
-                <div class="title"><img src="img/find_store_desc1.png" alt="스타벅스를 가까이에서 경험해보세요."></div>
-                <div class="desc"><img src="img/find_store_desc2.png" alt="고객님과 가장 가까이 있는 매장을 찾아보세요!"></div>
-                <div class="btn">매장찾기</div>
+                <div class="title return-to-position to-left"><img src="img/find_store_text1.png" alt="스타벅스를 가까이에서 경험해보세요."></div>
+                <div class="desc return-to-position to-left"><img src="img/find_store_text2.png" alt="고객님과 가장 가까이 있는 매장을 찾아보세요!"></div>
+                <div class="more return-to-position to-left"><a href="#" class="btn">매장찾기</a></div>
             </div>
 
         </div>
@@ -649,26 +649,26 @@
 
 
     <!--AWARD-->
-    <section class="award">
+    <section class="section award">
         <div class="inner">
             
             <div class="slider">
                 <ul>
-                    <li><a href="#"><img src="img/slider_award01.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award02.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award03.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award04.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award05.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award06.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award07.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award08.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award09.jpg" alt=""></a></li>
-                    <li><a href="#"><img src="img/slider_award10.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide1.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide2.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide3.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide4.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide5.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide6.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide7.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide8.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide9.jpg" alt=""></a></li>
+                    <li><a href="#"><img src="img/award_slide10.jpg" alt=""></a></li>
                 </ul>
             </div>
 
-            <div class="arrow-btn arrow-btn-white arrow-btn-left"></div>
-            <div class="arrow-btn arrow-btn-white arrow-btn-right"></div>
+            <div class="arrow-btn arrow-btn-white arrow-btn-left prev"></div>
+            <div class="arrow-btn arrow-btn-white arrow-btn-right next"></div>
 
         </div>
     </section>
@@ -708,7 +708,17 @@
     </footer>
 
 
-    <div id="to-top" class="arrow-btn arrow-btn-top"></div>
+    <div id="to-top"><div class="arrow-btn arrow-btn-top"></div></div>
+
+
+    <nav>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
 
 
 </div>

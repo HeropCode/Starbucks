@@ -7,6 +7,28 @@
     font-family: "Nanum Gothic", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
+    /*overflow-x: hidden;*/
+}
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: -1;
+    background: url("../img/season_product_product.png"),
+                url("../img/season_product_text1.png"),
+                url("../img/season_product_text2.png"),
+                url("../img/reserve_logo.png"),
+                url("../img/reserve_text.png"),
+                url("../img/reseve_products.png"),
+                url("../img/favorite_desc1.png"),
+                url("../img/favorite_desc2.png"),
+                url("../img/find_store_icon1.jpg"),
+                url("../img/find_store_icon2.jpg"),
+                url("../img/find_store_text1.png"),
+                url("../img/find_store_text2.png");
+
 }
 img { vertical-align: top; }
 /*BTN*/
@@ -215,7 +237,7 @@ img { vertical-align: top; }
 /*HEADER*/
 header {
     background: url('../img/header_bg.jpg') repeat-x top,
-                url('../img/pattern.jpg') repeat-x bottom,
+                url('../img/header_figure_pattern.jpg') repeat-x bottom,
                 #2c2a29;
     border-top: 2px solid black;
     border-bottom: 1px solid #c8c8c8;
@@ -254,7 +276,7 @@ header .sub-menu li::before {
 }
 header .sub-menu li:first-child::before,
 header .sub-menu li.search::before,
-header .sub-menu li.top-card-toggle::before {
+header .sub-menu li.toggle-top-card::before {
     width: 0;
     height: 0;
 }
@@ -290,8 +312,8 @@ header .sub-menu li.search img {
 header .sub-menu li.search:hover img {
     opacity: 0.6;
 }
-header .sub-menu li.top-card-toggle {
-    background: url("../img/btn_toggle.png");
+header .sub-menu li.toggle-top-card {
+    background: url("../img/top_card_toggle.png");
     width: 55px;
     height: 44px;
     position: relative;
@@ -299,19 +321,11 @@ header .sub-menu li.top-card-toggle {
     cursor: pointer;
     margin: -10px 0 0 10px;
 }
-header .sub-menu li.top-card-toggle img {
+header .sub-menu li.toggle-top-card img {
     position: absolute;
     top: 0;
     left: 0;
 }
-header .sub-menu li.top-card-toggle img.cup {
-    top: 44px;
-}
-header .sub-menu li.top-card-toggle img.star {
-    top: -44px;
-    opacity: 0.6;
-}
-
 header .sub-menu li a {
     font-size: 13px;
     font-family: Arial, sans-serif;
@@ -424,7 +438,7 @@ header .mega-menu .texture .caption p {
 
 /*VISUAL*/
 .visual {
-    background: url("../img/bg_winter.jpg") center;
+    background: url("../img/visual_bg.jpg") center;
     margin-top: 122px;
 }
 .visual .inner {
@@ -555,7 +569,7 @@ header .mega-menu .texture .caption p {
     top: 0;
     right: 90px;
 }
-.notice-line .right-inner .arrow-btn {
+.notice-line .right-inner .toggle-promotion {
     position: absolute;
     top: 11px;
     right: 20px;
@@ -565,7 +579,6 @@ header .mega-menu .texture .caption p {
 /*PROMOTION*/
 .promotion {
     background: #f6f5ef;
-    /*display: none;*/
 }
 .promotion .inner {
     width: 1920px;
@@ -573,6 +586,7 @@ header .mega-menu .texture .caption p {
     position: relative;
     left: 50%;
     margin-left: -960px;
+    display: none;
 }
 .promotion .slider {
     width: 1920px;
@@ -604,14 +618,14 @@ header .mega-menu .texture .caption p {
     margin-right: 10px;
 }
 .promotion .auto-controls .bx-stop {
-    background: url("../img/slider_pause.png");
+    background: url("../img/promotion_slide_pause.png");
     width: 9px;
     height: 12px;
     display: block;
     cursor: pointer;
 }
 .promotion .auto-controls .bx-start {
-    background: url("../img/slider_play.png");
+    background: url("../img/promotion_slide_play.png");
     width: 9px;
     height: 12px;
     display: block;
@@ -628,14 +642,14 @@ header .mega-menu .texture .caption p {
     margin-right: 0;
 }
 .promotion .pager .bx-pager-item a {
-    background: url("../img/slider_pager.png");
+    background: url("../img/promotion_slide_pager.png");
     width: 13px;
     height: 12px;
     display: block;
     text-indent: -9999px;
 }
 .promotion .pager .bx-pager-item a.active {
-    background: url("../img/slider_pager_active.png");
+    background: url("../img/promotion_slide_pager_on.png");
 }
 .promotion .arrow-btn {
     width: 42px;
@@ -673,7 +687,7 @@ header .mega-menu .texture .caption p {
     right: 0;
 }
 .rewards .inner {
-    background: url("../img/img_rewards.jpg");
+    background: url("../img/rewards_bg.jpg");
     width: 1100px;
     height: 241px;
     margin: 0 auto;
@@ -702,7 +716,7 @@ header .mega-menu .texture .caption p {
 
 /*COFFEE BEANS*/
 .beans {
-    background-image: url("../img/coffee_beans.jpg");
+    background-image: url("../img/beans_bg.jpg");
 }
 .beans .inner {
     width: 1100px;
@@ -729,7 +743,7 @@ header .mega-menu .texture .caption p {
 
 /*SEASON PRODUCT*/
 .season-product {
-    background: url("../img/bg_season_product.jpg");
+    background: url("../img/season_product_bg.jpg");
 }
 .season-product .inner {
     width: 1100px;
@@ -745,14 +759,14 @@ header .mega-menu .texture .caption p {
 .season-product .description .desc {
     margin-top: 10px;
 }
-.season-product .description .btn {
+.season-product .description .more {
     margin-top: 15px;
 }
 
 
 /*RESERVE*/
 .reserve {
-    background: url("../img/bg_reserve.jpg");
+    background: url("../img/reserve_bg.jpg");
 }
 .reserve .inner {
     width: 1100px;
@@ -769,7 +783,7 @@ header .mega-menu .texture .caption p {
     margin-right: 50px;
     float: left;
 }
-.reserve .description .btn {
+.reserve .description .more {
     position: absolute;
     top: 124px;
     left: 208px;
@@ -783,7 +797,7 @@ header .mega-menu .texture .caption p {
 
 /*PICK YOUR FAVORITE*/
 .favorite {
-    background-image: url("../img/bg_favorite.jpg");
+    background-image: url("../img/favorite_bg.jpg");
 }
 .favorite .inner {
     width: 1100px;
@@ -797,22 +811,22 @@ header .mega-menu .texture .caption p {
     top: 100px;
     left: 100px;
 }
-.favorite .description > .title {
+.favorite .description .title {
     margin-bottom: 40px;
     float: right;
 }
-.favorite .description > .desc {
+.favorite .description .desc {
     margin-bottom: 40px;
     float: right;
 }
-.favorite .description > .btn {
+.favorite .description .more {
     float: right;
 }
 
 
 /*VIEW THE STORE*/
 .view-store {
-    background-image: url("../img/bg_view_store.jpg");
+    background-image: url("../img/view_store_bg.jpg");
     height: 600px;
     position: relative;
 }
@@ -827,7 +841,7 @@ header .mega-menu .texture .caption p {
     margin: auto;
 }
 .view-store .medal .front {
-    background: url("../img/medal_front.png");
+    background: url("../img/view_store_medal_front.png");
     width: 334px;
     height: 334px;
     position: absolute;
@@ -838,7 +852,7 @@ header .mega-menu .texture .caption p {
     transform: rotateY(0deg);
 }
 .view-store .medal .back {
-    background: url("../img/medal_back.png");
+    background: url("../img/view_store_medal_back.png");
     width: 334px;
     height: 334px;
     position: absolute;
@@ -861,7 +875,7 @@ header .mega-menu .texture .caption p {
 
 /*FIND STORE*/
 .find-store {
-    background: url("../img/bg_find_store.jpg");
+    background: url("../img/find_store_bg.jpg");
 }
 .find-store .inner {
     width: 1100px;
@@ -919,17 +933,18 @@ header .mega-menu .texture .caption p {
     width: 1100px;
     height: 40px;
 }
-.award .arrow-btn {
+.award .prev,
+.award .next {
     position: absolute;
     top: 0;
     bottom: 0;
     margin: auto 0;
-    opacity: .75;
+    opacity: .3;
 }
-.award .arrow-btn-left {
+.award .prev {
     left: -100px;
 }
-.award .arrow-btn-right {
+.award .next {
     right: -100px;
 }
 
@@ -1008,9 +1023,12 @@ footer .logo {
 
 
 #to-top {
-    border-radius: 10px;
     position: fixed;
     bottom: 50px;
     right: 50px;
     z-index: 1000;
+    display: none;
+}
+#to-top .arrow-btn{
+    border-radius: 10px;
 }
