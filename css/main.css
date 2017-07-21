@@ -3,31 +3,9 @@
 
 /*COMMON*/
 .container {
-    font-family: "Nanum Gothic", Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     /*overflow-x: hidden;*/
-}
-.container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    z-index: -1;
-    background: url("../img/season_product_product.png"),
-                url("../img/season_product_text1.png"),
-                url("../img/season_product_text2.png"),
-                url("../img/reserve_logo.png"),
-                url("../img/reserve_text.png"),
-                url("../img/reseve_products.png"),
-                url("../img/favorite_desc1.png"),
-                url("../img/favorite_desc2.png"),
-                url("../img/find_store_icon1.jpg"),
-                url("../img/find_store_icon2.jpg"),
-                url("../img/find_store_text1.png"),
-                url("../img/find_store_text2.png");
-
 }
 img { vertical-align: top; }
 /*BTN*/
@@ -187,7 +165,7 @@ img { vertical-align: top; }
 .top-card {
     background: #111111;
     color: white;
-    display: none;
+    /*display: none;*/
 }
 .top-card .inner {
     width: 1100px;
@@ -585,82 +563,24 @@ header .mega-menu .texture .caption p {
     position: relative;
     left: 50%;
     margin-left: -960px;
-    display: none;
+    /*display: none;*/
 }
 .promotion .slider {
     width: 1920px;
     height: 553px;
 }
-.promotion .slider ul {
-    margin-left: 550px;
-}
-.promotion .slider li {
-    position: relative;
-    opacity: 0.5;
-}
-.promotion .slider li.active {
-    opacity: 1;
-}
-.promotion .slider li .btn {
-    position: absolute;
-    bottom: 16px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
-.promotion .controls {
-    display: table;
-    margin: 20px auto 0 auto;
-}
-.promotion .auto-controls {
-    float: left;
-    margin-right: 10px;
-}
-.promotion .auto-controls .bx-stop {
-    background: url("../img/promotion_slide_pause.png");
-    width: 9px;
-    height: 12px;
-    display: block;
-    cursor: pointer;
-}
-.promotion .auto-controls .bx-start {
-    background: url("../img/promotion_slide_play.png");
-    width: 9px;
-    height: 12px;
-    display: block;
-    cursor: pointer;
-}
-.promotion .pager {
-    float: left;
-}
-.promotion .pager .bx-pager-item {
-    float: left;
-    margin-right: 10px;
-}
-.promotion .pager .bx-pager-item:last-child {
-    margin-right: 0;
-}
-.promotion .pager .bx-pager-item a {
-    background: url("../img/promotion_slide_pager.png");
-    width: 13px;
-    height: 12px;
-    display: block;
-    text-indent: -9999px;
-}
-.promotion .pager .bx-pager-item a.active {
-    background: url("../img/promotion_slide_pager_on.png");
-}
-.promotion .arrow-btn {
+.promotion .prev,
+.promotion .next {
     width: 42px;
     height: 42px;
     position: absolute;
     top: 200px;
     z-index: 100;
 }
-.promotion .arrow-btn.prev {
+.promotion .prev {
     left: 450px;
 }
-.promotion .arrow-btn.next {
+.promotion .next {
     right: 450px;
 }
 
@@ -828,47 +748,6 @@ header .mega-menu .texture .caption p {
     background-image: url("../img/view_store_bg.jpg");
     height: 600px;
     position: relative;
-}
-.view-store .medal {
-    width: 334px;
-    height: 334px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-.view-store .medal .front {
-    background: url("../img/view_store_medal_front.png");
-    width: 334px;
-    height: 334px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .7s;
-    backface-visibility: hidden;
-    transform: rotateY(0deg);
-}
-.view-store .medal .back {
-    background: url("../img/view_store_medal_back.png");
-    width: 334px;
-    height: 334px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .7s;
-    backface-visibility: hidden;
-    transform: rotateY(180deg);
-}
-.view-store .medal:hover .front { transform: rotateY(180deg); }
-.view-store .medal:hover .back { transform: rotateY(0deg); }
-.view-store .medal .back .btn {
-    position: absolute;
-    top: 240px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
 }
 
 
