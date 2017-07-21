@@ -35,7 +35,7 @@
     sliderHandler();
     togglePromotionHandler();
     playTogglePromotionBtn();
-    checkScroll();
+    checkScrollLocate();
     checkSectionOffsetTop();
     setReturnToPosition();
     pluginNiceScroll();
@@ -296,7 +296,7 @@
     TweenMax.to(selector, random(minTime, maxTime), { delay: random(0, delay), y: size, repeat: -1, yoyo: true, ease: Power0.easeNone });
   }
 
-  function checkScroll() {
+  function checkScrollLocate() {
     $(window).on('scroll', function () {
       _sb.scrollLocate = $(this).scrollTop() + ($(this).height() / 2);
 
@@ -323,8 +323,6 @@
           console.log('Current section is ' + i);
 
           changeSectionEvent(i);
-          resetReturnToPosition(i);
-          toggleToTop(i);
         }
       }
     }
@@ -335,6 +333,9 @@
     returnToPosition('.reserve', 1, currentSection, 5);
     returnToPosition('.favorite', 1, currentSection, 6);
     returnToPosition('.find-store', 1, currentSection, 8);
+
+    resetReturnToPosition(currentSection);
+    toggleToTop(currentSection);
   }
 
   function setReturnToPosition() {

@@ -651,17 +651,18 @@ header .mega-menu .texture .caption p {
 .promotion .pager .bx-pager-item a.active {
     background: url("../img/promotion_slide_pager_on.png");
 }
-.promotion .arrow-btn {
+.promotion .prev,
+.promotion .next {
     width: 42px;
     height: 42px;
     position: absolute;
     top: 200px;
     z-index: 100;
 }
-.promotion .arrow-btn.prev {
+.promotion .prev {
     left: 450px;
 }
-.promotion .arrow-btn.next {
+.promotion .next {
     right: 450px;
 }
 
