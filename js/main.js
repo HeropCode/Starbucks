@@ -322,13 +322,13 @@
           _sb.currentSecIndex = i;
           console.log('Current section is ' + i);
 
-          changeSectionEvent(i);
+          changeSectionHandler(i);
         }
       }
     }
   }
 
-  function changeSectionEvent(currentSection) {
+  function changeSectionHandler(currentSection) {
     returnToPosition('.season-product', 1, currentSection, 4);
     returnToPosition('.reserve', 1, currentSection, 5);
     returnToPosition('.favorite', 1, currentSection, 6);
