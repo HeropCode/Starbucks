@@ -197,7 +197,7 @@ TweenMax.to(window, .7, { scrollTo: 0 });
 
 #### Set scroll
 
-화면 스크롤을 제어하기 위해 `NiceScroll(jQuery)`를 사용하세요.
+화면 스크롤을 제어하기 위해 `NiceScroll(jQuery)` 플러그인을 사용하세요.
 
 [NiceScroll](https://github.com/inuyaksa/jquery.nicescroll)
 
