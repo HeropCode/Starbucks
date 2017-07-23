@@ -187,3 +187,31 @@ function random(min, max) {
 
 ### 공통
 
+#### Move to top
+
+`TweenMax`의 `scrollTo` 플러그인을 이용하여 '상단으로 이동' 버튼을 완성하세요.
+
+```js
+TweenMax.to(window, .7, { scrollTo: 0 });
+```
+
+#### Set scroll
+
+화면 스크롤을 제어하기 위해 `NiceScroll(jQuery)`를 사용하세요.
+
+[NiceScroll](https://github.com/inuyaksa/jquery.nicescroll)
+
+```js
+$('html').niceScroll({
+  cursorcolor: 'rgba(0,0,0,.7)',
+  cursorwidth: 10,
+  cursorborder: 'none',
+  cursorborderradius: 0,
+  background: 'none',
+  scrollspeed: 60,
+  mousescrollstep: 40,
+  autohidemode: false,
+  zindex: 9999
+});
+```
+

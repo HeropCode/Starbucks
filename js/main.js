@@ -394,11 +394,11 @@
 
   function pluginNiceScroll() {
     $('html').niceScroll({
-      cursorcolor: "rgba(0,0,0,.7)",
+      cursorcolor: 'rgba(0,0,0,.7)',
       cursorwidth: 10,
-      cursorborder: "none",
+      cursorborder: 'none',
       cursorborderradius: 0,
-      background: "none",
+      background: 'none',
       scrollspeed: 60,
       mousescrollstep: 40,
       autohidemode: false,
