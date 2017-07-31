@@ -2,7 +2,7 @@
   'use strict';
 
   // STARBUCKS OBJECT
-  var _sb = {};
+  var _sb = _sb || {};
 
   // DOCUMENT READY
   $(function () {
