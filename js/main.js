@@ -119,7 +119,6 @@
 
     _sb.$searchBtn.on('click', function () {
       _sb.$searchInput.focus();
-      focusSearch(600);
     });
   }
 
@@ -154,6 +153,7 @@
   function submitSearch($this, event) {
     switch (event.which) {
       case _sb.ENTER_KEY:
+        event.preventDefault();
         console.log('SEARCH: ' + $this.val());
         break;
     }
