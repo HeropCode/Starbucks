@@ -278,7 +278,7 @@
   // 프로모션 영역 열기
   function openPromotion() {
     _sb.$promotion
-      .stop(false, true)
+      .stop()
       .slideDown(400, function () {
         $('html').getNiceScroll().resize();
       })
@@ -290,7 +290,7 @@
   // 프로모션 영역 닫기
   function closePromotion() {
     _sb.$promotion
-      .stop(false, true)
+      .stop()
       .slideUp(400, function () {
         _sb.promotionSlider.destroySlider();
       })

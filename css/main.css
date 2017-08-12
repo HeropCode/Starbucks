@@ -840,7 +840,7 @@ header .mega-menu .texture .caption p {
     left: 0;
     right: 0;
     margin: auto;
-    perspective: 600px;
+    perspective: 500px;
 }
 .view-store .medal .front {
     background: url("../img/view_store_medal_front.png");
