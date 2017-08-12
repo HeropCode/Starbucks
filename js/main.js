@@ -372,10 +372,7 @@
   function changeSectionHandler() {
     console.log('Current section is ' + _sb.currentSecIndex);
 
-    returnToPosition('.season-product', 1, 4);
-    returnToPosition('.reserve', 1, 5);
-    returnToPosition('.favorite', 1, 6);
-    returnToPosition('.find-store', 1, 8);
+    returnToPosition(1);
 
     resetReturnToPosition();
     toggleToTop();
@@ -397,13 +394,16 @@
   }
 
   // 좌/우 애니메이션 실행 함수
-  function returnToPosition(sectionSelector, duration, whichSectionIndex) {
-    // 현재 보이는 섹션과 설정된 섹션이 일치할 경우 동작
-    if (_sb.currentSecIndex === whichSectionIndex) {
-      $(sectionSelector + ' .return-to-position').each(function (index) {
-        TweenMax.to(this, duration, { delay: index * .3, x: 0, opacity: 1 });
-      });
-    }
+  function returnToPosition(duration) {
+    var returnToPosition = $('.section').eq(_sb.currentSecIndex).find('.return-to-position');
+
+    // 검색한 '.return-to-position'의 개수가 없다면 함수 종료
+    if (returnToPosition.length === 0) return;
+
+    // 검색한 '.return-to-position'의 개수가 있다면 애니메이션 실행
+    returnToPosition.each(function (index) {
+      TweenMax.to(this, duration, { delay: index * .3, x: 0, opacity: 1 });
+    });
   }
 
   // 좌/우 애니메이션 원위치로 돌아가는 함수
