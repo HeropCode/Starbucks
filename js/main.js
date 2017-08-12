@@ -27,6 +27,7 @@
     _sb.searchValue = '';
     _sb.ENTER_KEY = 13;
     _sb.$promotion = $('.promotion .inner');
+    _sb.$promotionSliderList = $('.promotion .slider li');
     _sb.$togglePromotionBtn = $('.notice-line .toggle-promotion');
   }
 
@@ -216,11 +217,11 @@
       moveSlides: 1,
       slideWidth: 819,
       onSliderLoad: function (currentIndex) {
-        $('.promotion .slider li').removeClass('active');
-        $('.promotion .slider li.first').addClass('active');
+        _sb.$promotionSliderList.removeClass('active');
+        _sb.$promotionSliderList.filter('.first').addClass('active');
       },
       onSlideAfter: function ($slideElement, oldIndex, newIndex) {
-        $('.promotion .slider li').removeClass('active');
+        _sb.$promotionSliderList.removeClass('active');
         $slideElement.addClass('active');
       }
     });
