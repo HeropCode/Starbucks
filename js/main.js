@@ -42,7 +42,7 @@
     sliderHandler();
     togglePromotionHandler();
     playTogglePromotionBtn();
-    checkScrollLocate();
+    windowScroll();
     checkSectionOffsetTop();
     setReturnToPosition();
     pluginNiceScroll();
@@ -320,10 +320,8 @@
 
   // 범위 랜덤 함수(소수점 2자리까지)
   function random(min, max) {
-    return parseFloat(
-      (Math.random() * (max - min) + min)
-        .toFixed(2)
-    );
+    // '문자 데이터'로 나온 난수를 '숫자 데이터'로 변환
+    return parseFloat((Math.random() * (max - min) + min).toFixed(2));
   }
 
   // 부유하는(떠 다니는) 요소 만드는 함수
@@ -332,7 +330,7 @@
   }
 
   // 화면이 스크롤될 때...
-  function checkScrollLocate() {
+  function windowScroll() {
     $(window).on('scroll', function () {
       // 화면의 수직 정가운데 위치를 알아내기
       _sb.scrollLocate = $(this).scrollTop() + ($(this).height() / 2);
@@ -353,29 +351,33 @@
   function checkCurrentSection() {
     var secLength = _sb.secOffsetTop.length;
 
+    // 섹션의 개수만큼 반복
     for (var i = 0; i < secLength; i++) {
+      // 현재 스크롤 위치와 각 섹션의 범위가 일치하는지 비교
       if (_sb.scrollLocate >= _sb.secOffsetTop[i] && _sb.scrollLocate < _sb.secOffsetTop[i + 1]) {
+        // 저장된 현재 섹션의 번호와 비교된 현재 섹션의 번호가 일치할 때
         if (_sb.currentSecIndex === i) {
-          return;
+          return;  // 함수 종료
         } else {
-          _sb.currentSecIndex = i;
-          console.log('Current section is ' + i);
+          _sb.currentSecIndex = i;  // 현재 섹션 번호 갱신
 
-          changeSectionHandler(i);
+          changeSectionHandler();
         }
       }
     }
   }
 
   // 현재 보이는 섹션이 다른 섹션으로 변경될 때마다 실행하는 함수
-  function changeSectionHandler(currentSectionIndex) {
-    returnToPosition('.season-product', 1, currentSectionIndex, 4);
-    returnToPosition('.reserve', 1, currentSectionIndex, 5);
-    returnToPosition('.favorite', 1, currentSectionIndex, 6);
-    returnToPosition('.find-store', 1, currentSectionIndex, 8);
+  function changeSectionHandler() {
+    console.log('Current section is ' + _sb.currentSecIndex);
 
-    resetReturnToPosition(currentSectionIndex);
-    toggleToTop(currentSectionIndex);
+    returnToPosition('.season-product', 1, 4);
+    returnToPosition('.reserve', 1, 5);
+    returnToPosition('.favorite', 1, 6);
+    returnToPosition('.find-store', 1, 8);
+
+    resetReturnToPosition();
+    toggleToTop();
   }
 
   // 좌/우 애니메이션의 실행 전 세팅(원위치 설정)하는 함수
@@ -384,19 +386,19 @@
       var x = 100;
 
       if ($(this).hasClass('to-right')) {  // 클래스를 확인하여, 왼쪽에서 오른쪽으로 움직일 요소는...
-        x = Math.abs(x);  // 원위치를 왼쪽으로 설정
+        x *= -1;  // x = x * -1; 와 동일합니다. / 원위치를 왼쪽으로 설정
       } else if ($(this).hasClass('to-left')) {  // 클래스를 확인하여, 오른쪽에서 왼쪽으로 움직일 요소는...
-        x *= -1;  // x = x * -1; 와 동일합니다. / 원위치를 오른쪽으로 설정
+        x = Math.abs(x);  // 원위치를 오른쪽으로 설정
       }
 
-      TweenMax.set(this, { x: -x, opacity: 0 });  // 넘어온 x 값으로 원위치 설정
+      TweenMax.set(this, { x: x, opacity: 0 });  // 넘어온 x 값으로 원위치 설정
     });
   }
 
   // 좌/우 애니메이션 실행 함수
-  function returnToPosition(sectionSelector, duration, currentSectionIndex, whichSectionIndex) {
+  function returnToPosition(sectionSelector, duration, whichSectionIndex) {
     // 현재 보이는 섹션과 설정된 섹션이 일치할 경우 동작
-    if (currentSectionIndex === whichSectionIndex) {
+    if (_sb.currentSecIndex === whichSectionIndex) {
       $(sectionSelector + ' .return-to-position').each(function (index) {
         TweenMax.to(this, duration, { delay: index * .3, x: 0, opacity: 1 });
       });
@@ -404,8 +406,8 @@
   }
 
   // 좌/우 애니메이션 원위치로 돌아가는 함수
-  function resetReturnToPosition(currentSection) {
-    if (currentSection <= 1) {
+  function resetReturnToPosition() {
+    if (_sb.currentSecIndex <= 1) {
       setReturnToPosition();
     }
   }
@@ -433,8 +435,8 @@
   }
 
   // 페이지 최상단으로 올라가는 버튼을 언제 보여주고, 숨길지 설정하는 함수
-  function toggleToTop(currentSection) {
-    if (currentSection > 3) {  // 3번 섹션 이후부터 보여줌
+  function toggleToTop() {
+    if (_sb.currentSecIndex > 3) {  // 3번 섹션 이후부터 보여줌
       showToTop();
     } else {
       hideToTop();
